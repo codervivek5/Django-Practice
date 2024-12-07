@@ -18,7 +18,9 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-   path('', include('home.urls'))
+    path('', include('home.urls')),
+    path('demo/', include('demo.urls')),
+    path('iReceipe/', include('iReceipe.urls')),
 ]
 
 # custome admin text code

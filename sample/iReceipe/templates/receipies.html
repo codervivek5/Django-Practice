@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %} Receipies {% endblock title %}
+
+{% block body %}
+
+ <form action="post" class="container bg-warning mt-5  rounded p-5">
+    <div class="mb-3">
+        <label for="receipe_name" class="form-label h3">Receipe Name</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter receipe name">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+
+ </form>
+
+
+{% endblock body %}

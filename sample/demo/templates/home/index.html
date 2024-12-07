@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Demo page{% endblock title %}
+
+{% block body %}
+
+
+<table class="table container mt-5 ">
+    <thead class="table-primary">
+      <tr>
+        <th scope="col">Sr.no.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Vote</th>
+      </tr>
+    </thead>
+
+    <tbody class="table-warning">
+        {% for person in people %}
+        <tr >
+          <td>{{ forloop.counter }}</td>
+          <td>{{ person.name }}</td>
+          <td>{{ person.age }}</td>
+          <td {% if person.age < 18 %} class = "table-danger" {% endif %}>
+            {% if person.age >= 18 %}👍
+            {% else %}
+            👎
+            {% endif %}
+            
+          </td>
+          
+        </tr>
+        {% endfor %}
+                  
+    </tbody>
+  </table> 
+
+  <p> {% now "DATE_FORMAT" %}</p>
+ 
+  
+  {% now "SHORT_DATETIME_FORMAT" %}
+
+  <p>
+    {% if "Potato" in vegetables %}
+    Vegetable is present
+    {% else %} not available
+    {% endif %}
+  </p>
+
+  {% endblock body %}
+
